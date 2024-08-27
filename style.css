@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #DEB887;
+}
+
+header {
+    background: white;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    border:20px solid #DEB887;
+    
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 4px 15px 5px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #070707, #0c0c0c);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+h1:hover {
+    color:#DEB887;
+}
+
+nav {
+    margin-top: 1rem;
+    
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    border: 2px solid black; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: wheat;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu li:hover {
+    background-color: #6ad2d9; 
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 20px;
+}
+p{
+    color: black;
+}
+
+.intro, .contact, .gallery {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url(2.jpg);
+}
+
+
+h2 {
+    color: #333;
+    
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #DEB887;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    
+    border:20px solid white;
+}
+footer p{
+    color: white;
+    font-size: 30px;
+}
+
+    
+

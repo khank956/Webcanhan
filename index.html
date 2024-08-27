@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tiểu Sử</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="parallax" data-depth="0.5">
+        <h1 id="typing-effect"> 
+            Chào Mừng Đến Với Trang  Cá Nhân Của Tôi! </h1>
+       
+        <nav>
+            <ul class="menu">
+                <li><a href="#intro">Giới Thiệu</a></li>
+                <li><a href="#gallery">Ảnh Cá Nhân</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro" class="intro">
+            <h2>Giới Thiệu</h2>
+            <p> 
+                Xin chào! Tôi tên là Đỗ Quốc Khánh, sinh ngày 22/06/2002,
+                được sinh ra và lớn lên ở vùng đất Tây Ninh. Hiện tại
+                tôi đang sống và học tập ở Thành Phố HCM và đang là sinh viên năm cuối
+                của NUYEN TAT THANH UNIVERSITY chuyên ngành của tôi là "Kỹ Sư Phần Mềm".   
+            </p>
+            <h2>Ước Mơ</h2>
+            <p> 
+                Tôi chỉ có một mơ ước nhỏ nhoi là hoàn thành xong việc học 
+                đi nghĩa vụ quân sự để hoàn thành nghĩa vụ cho tổ quốc khi hoàn
+                thành xong tôi sẽ về nhà tìm một công việc ổn định để nuôi sống bản thân và gia đình 
+            </p>
+            <h2>Kỹ Năng</h2>
+            <p> 
+                - ReactJS <br>
+                - JavaScript <br>
+                - PHP <br>
+                - MySQL
+            </p>
+        </section>
+        
+        <section id="gallery" class="gallery">
+            <h2></h2>
+            <div class="image-container">
+                <img src="./Imges/1.jpg" alt="Mô tả ảnh 1">   
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Bạn có thể tìm thấy tôi thông qua:</h2>
+            <p>Email: <a href="doquockhanh90710@gmail.com">doquockhanh90710@gmail.com</a></p>
+            <p>Điện thoại: 0937390710</p>
+        </section>
+    </main>
+    <footer>
+        <p>CẢM ƠN BẠN VÌ ĐÃ DÀNH THỜI GIAN QUAN TÂM ĐẾN TIỂU SỬ CỦA TÔI</p>
+    </footer>
+
+    <script>
+        // Cuộn mượt mà cho các liên kết điều hướng
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
+        // Hiệu ứng phóng to ảnh trong thư viện
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.1)';
+                img.style.transition = 'transform 0.3s ease';
+            });
+    
+            img.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+            });
+        });
+    
+        // Hiệu ứng đổ bóng cho tiêu đề khi cuộn
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+    
+</body>
+</html>
